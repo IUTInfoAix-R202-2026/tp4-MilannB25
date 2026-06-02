@@ -62,19 +62,16 @@ class QualificationViewModelTest {
     assertThat(premiere.getStatut()).isEqualTo("Écoutée");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void les_trois_verdicts_sont_proposes() {
     assertThat(vm.listeVerdicts()).containsExactly("OK", "Douteux", "À jeter");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_libelle_du_verdict_invite_a_saisir_tant_que_rien_n_est_enregistre() {
     assertThat(vm.verdictGlobalLibelleProperty().get()).isEqualTo("Verdict global : (à saisir)");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void enregistrer_un_verdict_met_a_jour_le_libelle() {
     vm.verdictSaisiProperty().set("OK");
@@ -83,7 +80,6 @@ class QualificationViewModelTest {
     assertThat(vm.verdictGlobalLibelleProperty().get()).isEqualTo("Verdict global : OK");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_commentaire_est_relie_au_modele() {
     vm.commentaireProperty().set("Beaucoup de Pipistrelles cette nuit.");
